@@ -146,14 +146,27 @@ let nextBtn = document.getElementById('nextBtn');
 
 let skipBtn = document.getElementById('skipBtn');
 
+let scoreDisplay = document.getElementById('scoreDisplay');
+scoreDisplay.style.display = "none";
+
 
 let currentQuiz = 0;
 let score = 0;
+let currentQuestionIndex = 0;
 
 function loadQuiz(){
 
+    if(currentQuiz >= quizData.length)
+    {
+        previousBtn.style.display = "none";
+        nextBtn.style.display = "none";
+        skipBtn.style.display = "none";
+        scoreDisplay.style.display = "block";
+        scoreDisplay.innerHTML = "SCORE :  "+ score;
+        return;
+    }
     const currentQuizData = quizData[currentQuiz];
-    const currentQuestionData = currentQuizData.questions[0];
+    const currentQuestionData = currentQuizData.questions[currentQuestionIndex];
 
 
     questionText.textContent = currentQuestionData.question;
@@ -162,6 +175,99 @@ function loadQuiz(){
     optionTextB.textContent = currentQuestionData.options[1];
     optionTextC.textContent = currentQuestionData.options[2];
     optionTextD.textContent = currentQuestionData.options[3];
+
+    optionTextA.checked = false;
+    optionTextB.checked = false;
+    optionTextC.checked = false;
+    optionTextD.checked = false;
+
+    
+
 }
 
 loadQuiz();
+
+let selectedOption = "";
+
+nextBtn.addEventListener("click", function(){
+    const correctAnswerIndex = quizData[currentQuiz].questions[currentQuestionIndex].options.indexOf(quizData[currentQuiz].questions[currentQuestionIndex].answer);
+    const selectedOptionIndex = ["A", "B", "C", "D"].indexOf(selectedOption);
+
+
+
+    if(selectedOptionIndex === correctAnswerIndex)
+    {
+        score++;
+    }
+
+    
+    currentQuestionIndex++;
+
+    if(currentQuestionIndex < quizData[currentQuiz].questions.length)
+    {
+        loadQuiz();
+    }
+    else{
+        currentQuiz++;
+        currentQuestionIndex = 0;
+        loadQuiz();
+    }
+    
+});
+
+optionTextA.addEventListener("click",function(){
+    selectedOption = "A";
+});
+
+optionTextB.addEventListener("click",function(){
+    selectedOption = "B";
+});
+
+optionTextC.addEventListener("click",function(){
+    selectedOption = "C";
+});
+
+optionTextD.addEventListener("click",function(){
+    selectedOption = "D";
+});
+
+
+previousBtn.addEventListener("click", function(){
+    if(currentQuestionIndex > 0)
+    {
+        currentQuestionIndex--;
+        loadQuiz();
+    }
+    else if(currentQuiz > 0)
+    {
+        currentQuiz--;
+        currentQuestionIndex = quizData[currentQuiz].questions.length - 1;
+        loadQuiz();
+    }
+});
+
+skipBtn.addEventListener("click", function(){
+    currentQuestionIndex++;
+    if(currentQuestionIndex < quizData[currentQuiz].questions.length)
+    {
+        loadQuiz();
+    }
+    else
+    {
+        currentQuiz++;
+        currentQuestionIndex = 0;
+    
+        if(currentQuiz < quizData.length)
+        {
+            loadQuiz();
+        }
+        else
+        {
+            previousBtn.style.display = "none";
+            nextBtn.style.display = "none";
+            skipBtn.style.display = "none";
+            scoreDisplay.style.display = "block";
+            scoreDisplay.innerHTML = "SCORE : " + score;
+        }
+    }
+});

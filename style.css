@@ -344,8 +344,23 @@ nav:after{
  }
 
  input{
-    /* display: none; */
     cursor: pointer;
+    font-size: 15px;
  }
+
+#scoreDisplay{
+    width:250px;
+    height: 50px;
+    background-color:#fcc822;
+    position: absolute;
+    bottom: 26px;
+    right:680px;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+
+}
+
+
 
  

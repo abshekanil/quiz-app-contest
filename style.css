@@ -361,6 +361,137 @@ nav:after{
 
 }
 
+@media only screen and (max-width: 750px)
+{
+    nav>ul>li>a{
+        display: none;
+    }
 
+    nav>ul>li>img{
+        position: absolute;
+        left: 10px;
+        font-size: 30px;
+    }
+
+    nav>ul>li>button{
+        position: absolute;
+        right: 60px;
+    }
+
+    .main-content{
+        overflow-x: hidden;
+    }
+    .main-content>.right-content{
+        display: none;
+    }
+
+
+    nav:after {
+        border-bottom: none;
+    }
+
+    .start-btn{
+        position: absolute;
+        bottom: 100px;
+        width: 80%;
+        left: -70px;
+    }
+
+    #category-selection{
+        width:500px;
+        height:650px;
+    }
+    #gk{
+        position: absolute;
+        right: 250px;
+        top: 500px;
+        width: 30%;
+        height: 3%;
+    }
+    #geography{
+        position: absolute;
+        right:250px;
+        top:570px;
+        width: 30%;
+        height: 3%;
+    }
+
+    #rap{
+        position: absolute;
+        right: 250px;
+        top:300px;
+        width: 30%;
+        height: 3%;
+    }
+
+    #animals{
+        position: absolute;
+        right: 250px;
+        top:360px;
+        width: 30%;
+        height: 3%;
+    }
+    #sports{
+        position: absolute;
+        left: 170px;
+        top: 430px;
+        width: 30%;
+        height: 3%;
+    }
+
+    #npcTag{
+        position: absolute;
+        left: 170px;
+        bottom:230px;
+        width: 30%;
+        height: 3%;
+    }
+
+    #quizBox{
+        width: 300px;
+        height:670px;
+        
+    }
+
+    #optionA{
+        position: absolute;
+        left: 100px;
+    }
+    #optionB{
+        position: absolute;
+        left: 100px;
+        top: 310px;
+    }
+
+    #optionC{
+        position: absolute;
+        left: 100px;
+        top: 490px;
+    }
+
+    #optionD{
+        position: absolute;
+        left: 100px;
+        top:580px;
+    }
+
+    #previousBtn{
+        position: absolute;
+        right: 200px;
+    }
+    #nextBtn{
+        position: absolute;
+        right: 90px;
+    }
+    #skipBtn{
+        position: absolute;
+        right: -1px;
+    }
+
+    #scoreDisplay{
+        position: absolute;
+        right: 10px;
+    }
+}
 
  

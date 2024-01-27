@@ -56,7 +56,27 @@
         <!-- quiz content -->
 
         <div id="questionBox">
-            <p></p>
+            <p id="questionText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iste libero odit perspiciatis eaque? Incidunt quas quidem reiciendis in quia!</p>
+            <div id="optionA">
+                <label for="optionTextA" id="firstOption">Option A</label>
+                <input type="radio" id="optionTextA" name="answer" class="answer">
+            </div>
+            <div id="optionB">
+                <label for="optionTextB" id="secondOption">Option B</label>
+                <input type="radio" id="optionTextB" name="answer" class="answer">
+            </div>
+            <div id="optionC">
+                <label for="optionTextC" id="thirdOption">Option C</label>
+                <input type="radio" id="optionTextC" name="answer" class="answer">
+            </div>
+            <div id="optionD">
+                <label for="optionTextD" id="fourthOption">Option D</label>
+                <input type="radio" id="optionTextD" name="answer" class="answer">
+            </div>
+
+            <button id="previousBtn"><i class="fa-solid fa-caret-left"></i> Previous</button>
+            <button id="nextBtn">Next</button>
+            <button id="skipBtn">Skip <i class="fa-solid fa-forward"></i></button>
         </div>
 
         <script src="./script.js"></script>

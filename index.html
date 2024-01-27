@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuizGrad</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="https://www.shareicon.net/download/2015/09/10/98911_info_512x512.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- navbar -->
+    <nav>
+       
+        <ul>
+            <li><img src="./Group 114.png" alt="logo"></li>
+            <li><a href="#">How it works?</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">About us</a></li>
+            <li><button class="login-btn">Login</button></li>
+        </ul>
+    </nav>
+
+    <!-- next section -->
+
+    <div class="main-content" id="mainContent">
+        <div class="left-content">
+            <h1>Learn<br>new concepts<br>for each question</h1>
+            <div class="ptag-1">
+                <p class="vertical-line">|</p>
+                <p>We help you prepare for exams and quizes</p>
+            </div>
+        </div>
+        <div class="right-content">
+            <img src="./Group 118.png" alt="img" style="width: 500px; height: 450px;">
+        </div>
+    </div>
+
+    <!-- next section -->
+    
+        <button class="start-btn" id="startSolving-btn">Start solving</button>
+
+        <div id="category-selection">
+            <h1 style="text-align: center; font-size: 60px;">Choose your favorite topic</h1>
+            <button id="topic-closeBtn"><i class="fa-solid fa-xmark"></i></button>
+            <p style="text-align: center; font-size: 20px;">Select more than 5 topics to start the quiz</p>
+            <div id="gk">GK<button id="gkSelectionBtn"><i class="fa-solid fa-xmark"></i></ id="selctionCloseBtn"></div>
+            <div id="sports">Sports<button id="sportsSelectionBtn"><i class="fa-solid fa-xmark"></i></button></div>
+            <div id="animals">Animals<button id="animalsSelectionBtn"><i class="fa-solid fa-xmark"></i></button></div>
+            <div id="geography">Geography<button id="geographySelectionBtn"><i class="fa-solid fa-xmark"></i></button></div>
+            <div id="rap">Rap Music<button id="rapSelectionBtn"><i class="fa-solid fa-xmark"></i></button></div>
+            <div id="npcTag">TagBadge</div>
+            <button id="startQuizBtn">Start Quiz</button>
+        </div>
+
+        <!-- quiz content -->
+
+        <div id="questionBox">
+            <p></p>
+        </div>
+
+        <script src="./script.js"></script>
+        <script src="./quiz.js"></script>
+    
+</body>
+</html>
